@@ -24,19 +24,15 @@
         SELECT * FROM student
     </select>
 
-
     <select id="findStudentByName" parameterType="String" resultMap="student">
         SELECT * FROM student
         WHERE username = #{username}
     </select>
 
-
     <select id="findStudentById" parameterType="int" resultMap="student">
         SELECT * FROM student
         WHERE id = #{id}
     </select>
-
-
 
     <insert id="addStudent" parameterType="com.lihoo.ssm.gai.model.Student">
         INSERT INTO student(username, qq_num, study_type, study_time, school, study_id, daily_link, promise, teach_bro, know_us_from, create_at, update_at)
@@ -53,6 +49,5 @@
         SET username = #{username}, school = #{school}, daily_link = #{daily_link}, update_at = #{update_at}
         WHERE id = #{id}
     </update>
-
-
+    
 </mapper>
