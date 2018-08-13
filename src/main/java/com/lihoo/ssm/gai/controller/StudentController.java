@@ -48,7 +48,7 @@ public class StudentController {
         return mav;
     }
 
-    @RequestMapping(value = "/student", method = RequestMethod.PUT)
+    @RequestMapping(value = "/student", method = RequestMethod.POST)
     public ModelAndView addStudent(Student student) throws Exception {
         logger.debug("student.getUserName():" + student.getUsername());
         studentService.addStudent(student);
@@ -71,7 +71,7 @@ public class StudentController {
         return mav;
     }
 
-    @RequestMapping(value = "/student/{id}", method = RequestMethod.POST)
+    @RequestMapping(value = "/student/{id}", method = RequestMethod.PUT)
     public ModelAndView updateStudent(Student student) throws Exception {
         studentService.updateStudent(student);
         ModelAndView mav = new ModelAndView("redirect:/student");
