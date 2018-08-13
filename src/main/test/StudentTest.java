@@ -95,8 +95,8 @@ public class StudentTest {
     public void testUpdateStudent() throws Exception {
         logger.debug("开始更改学员");
         Student stu = new Student();
-        stu.setId(39);
-        stu.setUsername("玛里苟斯");
+        stu.setId(2);
+        stu.setUsername("玛里苟斯111");
         stu.setSchool("新泽西大学");
         stu.setDaily_link("www.nice——daifu.com");
         stu.setUpdate_at(1534268749);
