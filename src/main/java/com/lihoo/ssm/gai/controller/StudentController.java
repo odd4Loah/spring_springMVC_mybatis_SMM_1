@@ -48,19 +48,32 @@ public class StudentController {
         return mav;
     }
 
+
+//    JSON——TAGLIB
+
+//    @RequestMapping(value = "/student", method = RequestMethod.GET)
+//    public ModelAndView listStudent() throws Exception {
+//        ModelAndView mav = new ModelAndView();
+//        List<Student> stus = studentService.findStudentList();
+//        mav.addObject("stus", stus);
+//        mav.setViewName("jsonList");
+//        logger.debug("OJBK");
+//        return mav;
+//    }
+
+
+
     @RequestMapping(value = "/student", method = RequestMethod.PUT)
     public ModelAndView addStudent(Student student) throws Exception {
         logger.debug("student.getUserName():" + student.getUsername());
         studentService.addStudent(student);
-        ModelAndView mav = new ModelAndView("redirect:/student");
-        return mav;
+        return new ModelAndView("redirect:/student");
     }
 
     @RequestMapping(value = "/student/{id}", method = RequestMethod.DELETE)
     public ModelAndView deleteStudent(Student student) throws Exception {
         studentService.deleteStudent(student);
-        ModelAndView mav = new ModelAndView("redirect:/student");
-        return mav;
+        return new ModelAndView("redirect:/student");
     }
 
     @RequestMapping(value = "/student/{id}", method = RequestMethod.GET)
@@ -74,8 +87,7 @@ public class StudentController {
     @RequestMapping(value = "/student/{id}", method = RequestMethod.POST)
     public ModelAndView updateStudent(Student student) throws Exception {
         studentService.updateStudent(student);
-        ModelAndView mav = new ModelAndView("redirect:/student");
-        return mav;
+        return new ModelAndView("redirect:/student");
     }
 
 
