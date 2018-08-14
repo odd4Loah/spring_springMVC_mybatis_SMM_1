@@ -10,6 +10,8 @@
 
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
+<%--<%@ taglib prefix="json" uri="http://www.atg.com/taglibs/json" %>--%>
+
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
@@ -80,7 +82,7 @@
 
         <div style="text-align: center; margin-top: 40px">
         <form method="post" action="student">
-            <input type="hidden" name="_method" value="PUT">
+            <input type="hidden" name="_method" value="POST">
 
             学生姓名：     <input type="text" name="username" value="安度因"><br><br>
             学生QQ:       <input type="number" name="qq_num" value="112233"><br><br>

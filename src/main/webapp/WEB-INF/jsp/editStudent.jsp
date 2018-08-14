@@ -8,7 +8,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" import="java.util.*"%>
 
+<%--<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>--%>
+
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
 <html>
 <head>
@@ -19,6 +23,7 @@
     <div style="width: 500px; margin:0 auto; text-align: center;">
         <div style="text-align: center; margin-top: 40px;">
             <form method="post" action="../student/${stu.id}">
+            <input type="hidden" name="_method" value="PUT">
 
             学生姓名：     <input type="text" name="username" value="${stu.username}"><br><br>
             学生QQ:       <input type="number" name="qq_num" value="${stu.qq_num}"><br><br>
