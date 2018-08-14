@@ -10,7 +10,7 @@ package com.lihoo.ssm.gai.model;
 
 @SuppressWarnings("unused")
 public class Student {
-    private int id;
+    private long id;
     private String username;
     private int qq_num;
     private String study_type;
@@ -27,7 +27,7 @@ public class Student {
     public Student() {
     }
 
-    public Student(int id, String username, int qq_num, String study_type, int study_time, String school, String study_id, String daily_link, String promise, String teach_bro, String know_us_from, int create_at, int update_at) {
+    public Student(long id, String username, int qq_num, String study_type, int study_time, String school, String study_id, String daily_link, String promise, String teach_bro, String know_us_from, int create_at, int update_at) {
         this.id = id;
         this.username = username;
         this.qq_num = qq_num;
@@ -43,11 +43,11 @@ public class Student {
         this.update_at = update_at;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 

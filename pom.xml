@@ -231,6 +231,13 @@
           <version>1.2.47</version>
       </dependency>
 
+      <!--google/gson-->
+      <dependency>
+          <groupId>com.google.code.gson</groupId>
+          <artifactId>gson</artifactId>
+          <version>2.7</version>
+      </dependency>
+
       <dependency>
           <groupId>org.codehaus.jackson</groupId>
           <artifactId>jackson-mapper-asl</artifactId>
@@ -243,6 +250,12 @@
       </dependency>
 
       <!-- JSP-JSON 相关 -->
+      <dependency>
+          <groupId>atg.taglib.json</groupId>
+          <artifactId>json-taglib</artifactId>
+          <version>0.4.1</version>
+      </dependency>
+
       <dependency>
           <groupId>jstl</groupId>
           <artifactId>jstl</artifactId>

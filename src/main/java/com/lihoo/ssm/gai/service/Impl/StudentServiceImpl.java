@@ -3,6 +3,7 @@ package com.lihoo.ssm.gai.service.Impl;
 import com.lihoo.ssm.gai.dao.StudentDao;
 import com.lihoo.ssm.gai.service.StudentService;
 import com.lihoo.ssm.gai.model.Student;
+import com.lihoo.ssm.gai.util.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,7 +30,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public Student findStudentById(int id) throws Exception {
+    public Student findStudentById(long id) throws Exception {
         return studentDao.findStudentById(id);
     }
 
@@ -44,8 +45,8 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public void deleteStudent(Student student) throws Exception {
-        studentDao.deleteStudent(student);
+    public void deleteStudent(long id) throws Exception {
+        studentDao.deleteStudent(id);
     }
 
     @Override

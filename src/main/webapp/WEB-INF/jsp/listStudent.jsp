@@ -5,12 +5,11 @@
   Time: 13:05
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java"
-         pageEncoding="UTF-8" import="java.util.*" %>
+<%--<%@ page contentType="text/html;charset=UTF-8" language="java"--%>
+         <%--pageEncoding="UTF-8" import="java.util.*" %>--%>
+<%--<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>--%>
 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
-<%--<%@ taglib prefix="json" uri="http://www.atg.com/taglibs/json" %>--%>
+<%@ include file="../includes/includes.jsp" %>
 
 <!DOCTYPE html>
 <html lang="zh-cn">
