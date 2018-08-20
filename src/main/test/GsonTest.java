@@ -30,6 +30,7 @@ public class GsonTest {
         UserX userX = new UserX(1, 20, "AA", new Date());
 
         System.out.println("Bean->转换为JSON字符串:");
+
         String jsonStr = gson.toJson(userX);
         System.out.println(jsonStr);
         System.out.println("安排");
@@ -40,7 +41,9 @@ public class GsonTest {
         Gson gson = new Gson();
         String jsonStr = "{\"id\":1,\"age\":20,\"userName\":\"AA\",\"birthday\":\"Nov 14, 2016 4:52:38 PM\"}";
         System.out.println("字符串->转换成Bean对象");
+
         UserX UserX = gson.fromJson(jsonStr, UserX.class);
+
         System.out.println(UserX);
         System.out.println("反向");
     }
@@ -50,6 +53,7 @@ public class GsonTest {
         Gson gson = new Gson();
         System.out.println("json转换复杂的bean，比如List，Set,Map:");
         String json = "[{\"id\":\"1\",\"name\":\"Json技术\"},{\"id\":\"2\",\"name\":\"java技术\"}]";
+
         List list = gson.fromJson(json, new TypeToken<List>() {
         }.getType());
         Set set = gson.fromJson(json, new TypeToken<Set>() {
@@ -92,7 +96,7 @@ public class GsonTest {
     public void test6() {
         System.out.println("从json串中获取属性");
         String json = "{\"id\":\"1\",\"name\":\"Json技术\"}";
-        String propertyName = "name";
+        String propertyName = "id";
         String propertyValue = "";
         try {
             JsonParser jsonParser = new JsonParser();
@@ -110,7 +114,7 @@ public class GsonTest {
     public void test7() {
         System.out.println("除去json中的某个属性");
         String json = "{\"id\":\"1\",\"name\":\"Json技术\"}";
-        String propertyName = "id";
+        String propertyName = "name";
         JsonParser jsonParser = new JsonParser();
         JsonElement element = jsonParser.parse(json);
         JsonObject jsonObj = element.getAsJsonObject();
@@ -155,7 +159,7 @@ public class GsonTest {
     public void test10() {
         System.out.println("判断json中是否有属性");
         String json = "{\"id\":\"1\",\"name\":\"Json技术\"}";
-        String propertyName = "name";
+        String propertyName = "age";
         boolean isContains = false;
         JsonParser jsonParser = new JsonParser();
         JsonElement element = jsonParser.parse(json);

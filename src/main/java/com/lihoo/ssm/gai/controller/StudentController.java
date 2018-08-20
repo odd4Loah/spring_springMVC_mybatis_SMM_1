@@ -35,39 +35,41 @@ public class StudentController {
 
 //// //   ******RequestBody********
 //
-////   // @ResponseBody:此注解完成返回对象到json数据的转换
-//    @ResponseBody
-//    @RequestMapping(value = "/student", method = RequestMethod.GET)
-//    public List<Student> findStudentList() throws Exception {
-//        logger.debug("开始获取数据！");
-//
-////        ModelAndView mav = new ModelAndView();
-////        PageHelper.offsetPage(page.getStart(), 5);
-//        List<Student> stus = studentService.findStudentList();
-//
-////        int total_page = (int) new PageInfo<>(stu).getTotal();
-////        page.caculateLast(total_page);
-////                放入转发参数
-////        mav.addObject("stu", stu);
-////        放入jsp路径
-////        mav.setViewName("listStudent");
-////        return mav;
-//        logger.debug("OK");
-//        return stus;
-//    }
+//   // @ResponseBody:此注解完成返回对象到json数据的转换
+
+
+    @ResponseBody
+    @RequestMapping(value = "/student", method = RequestMethod.GET)
+    public List<Student> findStudentList() throws Exception {
+        logger.debug("开始获取数据！");
+
+//        ModelAndView mav = new ModelAndView();
+//        PageHelper.offsetPage(page.getStart(), 5);
+        List<Student> stus = studentService.findStudentList();
+
+//        int total_page = (int) new PageInfo<>(stu).getTotal();
+//        page.caculateLast(total_page);
+//                放入转发参数
+//        mav.addObject("stu", stu);
+//        放入jsp路径
+//        mav.setViewName("listStudent");
+//        return mav;
+        logger.debug("OK");
+        return stus;
+    }
 
 
 ////    *****json-taglib*******
 
-    @RequestMapping(value = "/student", method = RequestMethod.GET)
-    public ModelAndView listStudent() throws Exception {
-        ModelAndView mav = new ModelAndView();
-        List<Student> stus = studentService.findStudentList();
-        mav.addObject("stus", stus);
-        mav.setViewName("jsonTaglib");
-        logger.debug("OJBK");
-        return mav;
-    }
+//    @RequestMapping(value = "/student", method = RequestMethod.GET)
+//    public ModelAndView listStudent() throws Exception {
+//        ModelAndView mav = new ModelAndView();
+//        List<Student> stus = studentService.findStudentList();
+//        mav.addObject("stus", stus);
+//        mav.setViewName("jsonTaglib");
+//        logger.debug("OJBK");
+//        return mav;
+//    }
 
 
 
