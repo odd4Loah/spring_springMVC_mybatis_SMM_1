@@ -20,7 +20,7 @@ public interface StudentService {
     void addStudent(Student student) throws Exception;
 
     //删除学生信息  接口
-    void deleteStudent(long id) throws Exception;
+    void deleteStudent(Student student) throws Exception;
 
     //修改学生信息  接口
     void updateStudent(Student student) throws Exception;

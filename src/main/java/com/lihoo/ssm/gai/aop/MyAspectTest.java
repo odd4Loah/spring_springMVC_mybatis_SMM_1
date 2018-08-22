@@ -4,7 +4,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 
 /**
- * #Title: MyAspect
+ * #Title: MyAspectTest
  * #ProjectName spring_springMVC_mybatis_SMM_JSON_miniClass
  * #Description: TODO
  * #author lihoo
@@ -12,7 +12,7 @@ import org.aspectj.lang.annotation.*;
  */
 
 @Aspect
-public class MyAspect {
+public class MyAspectTest {
 
     /**
      * 前置通知
