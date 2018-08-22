@@ -82,6 +82,13 @@
           <version>${mybatis.spring.version}</version>
       </dependency>
 
+      <!--mybatis.generator-->
+      <dependency>
+          <groupId>org.mybatis.generator</groupId>
+          <artifactId>mybatis-generator-core</artifactId>
+          <version>1.3.7</version>
+      </dependency>
+
       <!--MySQL驱动-->
       <dependency>
           <groupId>mysql</groupId>
@@ -94,6 +101,18 @@
           <groupId>com.mchange</groupId>
           <artifactId>c3p0</artifactId>
           <version>${c3p0.version}</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.aspectj</groupId>
+          <artifactId>aspectjrt</artifactId>
+          <version>1.9.1</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.aspectj</groupId>
+          <artifactId>aspectjweaver</artifactId>
+          <version>1.9.1</version>
       </dependency>
 
 
@@ -246,7 +265,12 @@
           <artifactId>json-taglib</artifactId>
           <version>0.4.1</version>
       </dependency>
-      <!-- https://mvnrepository.com/artifact/taglibs/standard -->
+
+      <dependency>
+          <groupId>jstl</groupId>
+          <artifactId>jstl</artifactId>
+          <version>${jstl.version}</version>
+      </dependency>
 
       <dependency>
           <groupId>taglibs</groupId>
@@ -254,7 +278,6 @@
           <version>1.1.2</version>
       </dependency>
 
-      <!-- https://mvnrepository.com/artifact/org.mortbay.jetty/servlet-api -->
       <dependency>
           <groupId>org.mortbay.jetty</groupId>
           <artifactId>servlet-api</artifactId>
@@ -262,11 +285,6 @@
       </dependency>
 
 
-      <dependency>
-          <groupId>jstl</groupId>
-          <artifactId>jstl</artifactId>
-          <version>${jstl.version}</version>
-      </dependency>
 
       <!--<dependency>-->
           <!--<groupId>javax.servlet</groupId>-->
@@ -424,6 +442,19 @@
               <groupId>org.apache.tomcat.maven</groupId>
               <artifactId>tomcat7-maven-plugin</artifactId>
               <version>2.2</version>
+          </plugin>
+
+
+          <plugin>
+              <groupId>org.mybatis.generator</groupId>
+              <artifactId>mybatis-generator-maven-plugin</artifactId>
+              <version>1.3.7</version>
+              <configuration>
+                  <!--是否允许移动生成的文件-->
+                  <verbose>true</verbose>
+                  <!--是否允许覆盖生成的文件-->
+                  <overwrite>true</overwrite>
+              </configuration>
           </plugin>
 
 

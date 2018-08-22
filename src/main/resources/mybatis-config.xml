@@ -15,6 +15,10 @@
 
         <!-- 打开全局缓存开关（二级缓存）默认值就是 true -->
         <setting name="cacheEnabled" value="true"/>
+
+        <!--开通log4j接口-->
+        <!--<setting name="LogImpl" value="LOG4J" />-->
+
     </settings>
 
     <!--别名定义-->
