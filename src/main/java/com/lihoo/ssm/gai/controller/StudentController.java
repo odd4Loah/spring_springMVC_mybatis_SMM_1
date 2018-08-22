@@ -49,6 +49,7 @@ public class StudentController {
 
     }
 
+//    ...
 
     // @RequestBody:此注解用来接收前台传来的json数据（在此例中）
     @RequestMapping(value = "/student", method = RequestMethod.POST)
