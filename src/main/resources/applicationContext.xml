@@ -2,20 +2,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:tx="http://www.springframework.org/schema/tx"
-       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
-       http://www.springframework.org/schema/context/spring-context.xsd
-       http://www.springframework.org/schema/tx
-       http://www.springframework.org/schema/tx/spring-tx.xsd
-       http://www.springframework.org/schema/aop
-       http://www.springframework.org/schema/aop/spring-aop.xsd">
+       http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="com.lihoo.ssm.gai"/>
-
-    <aop:aspectj-autoproxy />
+    <context:component-scan base-package="com.lihoo.ssm.gai.service"/>
 
     <!--加载配置文件-->
     <context:property-placeholder location="classpath:jdbc.properties"/>
@@ -70,8 +62,8 @@
         </property>
     </bean>
 
-    <!--3:  这里的id是根据扫描到的package里面的Mapper接口名来定义的，-->
-    <!--因为扫描的结果不唯一,所以这里省略了,这个bean就是包含了增删改查方法的bean-->
+    <!--3:  这里的id是根据扫描到的package里面的Mapper接口名来定义的，
+    因为扫描的结果不唯一,所以这里省略了,这个bean就是包含了增删改查方法的bean-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <!--basePackage 属性是映射器接口文件的包路径。
          你可以使用分号或逗号 作为分隔符设置多于一个的包路径-->
@@ -84,42 +76,6 @@
          或sqlSessionTemplateBeanName属性来设置正确的 bean名称来使用；-->
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
-
-
-    <!--配置事物-->
-    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <property name="dataSource" ref="dataSource0" />
-    </bean>
-
-    <!--事物的具体内容-->
-    <tx:advice id="transactionAdvice" transaction-manager="transactionManager">
-        <tx:attributes>
-            <tx:method name="add*" propagation="REQUIRED" />
-            <tx:method name="insert*" propagation="REQUIRED" />
-            <tx:method name="save*" propagation="REQUIRED" />
-            <tx:method name="update*" propagation="REQUIRED" />
-            <tx:method name="modify*" propagation="REQUIRED" />
-            <tx:method name="edit*" propagation="REQUIRED" />
-            <tx:method name="delete*" propagation="REQUIRED" />
-            <tx:method name="remove*" propagation="REQUIRED" />
-            <tx:method name="get*" propagation="SUPPORTS" />
-            <tx:method name="find*" propagation="SUPPORTS" />
-            <tx:method name="load*" propagation="SUPPORTS" />
-            <tx:method name="search*" propagation="SUPPORTS" />
-        </tx:attributes>
-    </tx:advice>
-
-    <!--定义一个切面,在定义的切面上加入事物-->
-    <!--<bean id="AspectController" class="com.lihoo.ssm.gai.aop.AspectController" />-->
-
-    <!--<aop:config>-->
-        <!--<aop:pointcut id="aspect" expression="execution(* com.lihoo.ssm.gai.service.*Impl.*.*(..))" />-->
-        <!--<aop:aspect id="myAspect" ref="AspectController">-->
-            <!--<aop:around method="around" pointcut-ref="aspect" />-->
-        <!--</aop:aspect>-->
-    <!--</aop:config>-->
-
-
 
 
     <!--<bean id="studentService" class="org.mybatis.spring.mapper.MapperFactoryBean" >-->

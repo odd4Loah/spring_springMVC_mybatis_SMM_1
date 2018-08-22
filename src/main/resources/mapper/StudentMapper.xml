@@ -29,7 +29,7 @@
         WHERE username = #{username}
     </select>
 
-    <select id="findStudentById" parameterType="int" resultMap="student">
+    <select id="findStudentById" parameterType="java.lang.Long" resultMap="student">
         SELECT * FROM student
         WHERE id = #{id}
     </select>
@@ -39,7 +39,7 @@
         VALUES (#{username},#{qq_num},#{study_type},#{study_time},#{school},#{study_id},#{daily_link},#{promise},#{teach_bro},#{know_us_from},#{create_at},#{update_at})
     </insert>
 
-    <delete id="deleteStudent" parameterType="com.lihoo.ssm.gai.model.Student">
+    <delete id="deleteStudent" parameterType="java.lang.Long">
         DELETE FROM student
         WHERE id = #{id}
     </delete>

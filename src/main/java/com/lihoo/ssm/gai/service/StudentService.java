@@ -1,6 +1,7 @@
 package com.lihoo.ssm.gai.service;
 
 import com.lihoo.ssm.gai.model.Student;
+import com.lihoo.ssm.gai.util.Page;
 
 import java.util.List;
 
@@ -10,7 +11,7 @@ public interface StudentService {
     List<Student> findStudentList() throws Exception;
 
     //通过id 查找学生
-    Student findStudentById(int id) throws Exception;
+    Student findStudentById(long id) throws Exception;
 
     //通过姓名查找学生
     Student findStudentByName(String username) throws Exception;

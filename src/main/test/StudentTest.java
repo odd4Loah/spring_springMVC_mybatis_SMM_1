@@ -2,6 +2,7 @@
 import com.lihoo.ssm.gai.dao.StudentDao;
 import com.lihoo.ssm.gai.service.StudentService;
 import com.lihoo.ssm.gai.model.Student;
+import com.lihoo.ssm.gai.util.Page;
 import org.apache.log4j.Logger;
 import org.junit.Before;
 import org.junit.Test;
@@ -44,7 +45,7 @@ public class StudentTest {
         logger.debug("查询成功！！！");
     }
 
-    
+
     @Test
     public void testFindStudentById() throws Exception {
         logger.debug("开始查询学员");
@@ -85,9 +86,9 @@ public class StudentTest {
     @Test
     public void testDeleteStudent() throws Exception {
         logger.debug("开始删除学员");
-        Student stu_del = new Student();
-        stu_del.setId(26);
-        studentDao.deleteStudent(stu_del);
+//        Student stu_del = new Student();
+//        stu_del.setId(26);
+        studentDao.deleteStudent(20);
         logger.debug("删除成功");
     }
 

@@ -9,9 +9,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="UTF-8" import="java.util.*" %>
 
+<%@ include file="../includes/includes.jsp" %>
 
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="json" uri="http://www.atg.com/taglibs/json" %>
 
 
 <c:forEach items="${stus}" var="s" varStatus="st">
