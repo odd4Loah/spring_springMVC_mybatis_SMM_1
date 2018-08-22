@@ -2,12 +2,29 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
+<<<<<<< HEAD
        http://www.springframework.org/schema/context/spring-context.xsd">
 
     <context:component-scan base-package="com.lihoo.ssm.gai.service"/>
+=======
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+
+    <!--扫描组件-->
+    <context:component-scan base-package="com.lihoo.ssm.gai"/>
+
+    <!--自动添加AOP-->
+    <aop:aspectj-autoproxy />
+>>>>>>> origin/master
 
     <!--加载配置文件-->
     <context:property-placeholder location="classpath:jdbc.properties"/>
@@ -78,12 +95,17 @@
     </bean>
 
 
+<<<<<<< HEAD
     <!--<bean id="studentService" class="org.mybatis.spring.mapper.MapperFactoryBean" >-->
         <!--<property name="sqlSessionFactory" ref="sqlSessionFactory" />-->
         <!--&lt;!&ndash; 注意指定的映射器类必须是一个接口，而不是具体的实现类  &ndash;&gt;-->
         <!--<property name="mapperInterface" value="com.lihoo.sm.dao.StudentDao" />-->
     <!--</bean>-->
 
+=======
+    <!-- 定义aspect类 -->
+    <bean name="myAspectJ" class="com.lihoo.ssm.gai.aop.MyAspectTest"/>
+>>>>>>> origin/master
 
 </beans>
 

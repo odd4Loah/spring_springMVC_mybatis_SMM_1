@@ -26,8 +26,8 @@ import static javax.management.timer.Timer.ONE_MINUTE;
  */
 @Aspect
 @Component
-public class ControllerAspect {
-    private static Logger logger = Logger.getLogger(ControllerAspect.class);
+public class MyAspectTest2 {
+    private static Logger logger = Logger.getLogger(MyAspectTest2.class);
 
 //    一分钟，60000ms
 //    private static final ONE_MINUTE;

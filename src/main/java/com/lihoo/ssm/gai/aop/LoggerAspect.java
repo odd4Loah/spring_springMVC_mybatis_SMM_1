@@ -21,7 +21,6 @@ import java.util.Date;
 @Aspect
 @Component
 public class LoggerAspect {
-
     private static Logger logger = Logger.getLogger(LoggerAspect.class);
 
 //    @Around(value = "execution(* com.lihoo.ssm.gai.service.Impl.*.*(..))")

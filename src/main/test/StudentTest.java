@@ -86,9 +86,9 @@ public class StudentTest {
     @Test
     public void testDeleteStudent() throws Exception {
         logger.debug("开始删除学员");
-//        Student stu_del = new Student();
-//        stu_del.setId(26);
-        studentDao.deleteStudent(20);
+        Student stu_del = new Student();
+        stu_del.setId(26);
+        studentDao.deleteStudent(stu_del);
         logger.debug("删除成功");
     }
 
