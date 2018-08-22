@@ -21,7 +21,6 @@
 
     <aop:aspectj-autoproxy />
 
-
     <!--注解驱动，以使得访问路径与方法的匹配可以通过注解配置-->
     <mvc:annotation-driven >
         <mvc:message-converters register-defaults="true">

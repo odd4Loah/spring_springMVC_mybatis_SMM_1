@@ -11,17 +11,16 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * #Title: LoggerAspect
- * #ProjectName spring_springMVC_mybatis_SMM_JSON_ResponseBody
+ * #Title: AspectController
+ * #ProjectName spring_springMVC_mybatis_SMM_1 - aop
  * #Description: TODO
  * #author lihoo
- * #date 2018/8/22-13:03
+ * #date 2018/8/20-19:20
  */
 
 @Aspect
 @Component
 public class LoggerAspect {
-
     private static Logger logger = Logger.getLogger(LoggerAspect.class);
 
 //    @Around(value = "execution(* com.lihoo.ssm.gai.service.Impl.*.*(..))")
@@ -49,13 +48,13 @@ public class LoggerAspect {
 
 
 
-    //
+//
 //    Pointcut 定义切点：StudentController中所有方法
     @Pointcut(value = "execution(* com.lihoo.ssm.gai.service.Impl.*.*(..))")
     public void serviceAspect() {
     }
 
-    //    joinPoint连接点
+//    joinPoint连接点
     @Around(value = "serviceAspect()")
     public Object around3(ProceedingJoinPoint pjp) throws Throwable {
         logger.debug("开始切面");
@@ -109,6 +108,7 @@ public class LoggerAspect {
         logger.debug(msg + "\t数据库响应时间：" + sqlTime + "ms");
         return obj;
     }
+
 
 
 }

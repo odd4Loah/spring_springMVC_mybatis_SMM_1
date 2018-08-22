@@ -7,7 +7,10 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java"
          pageEncoding="UTF-8" import="java.util.*" %>
+<<<<<<< HEAD
+=======
 <%--<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>--%>
+>>>>>>> origin/master
 
 <%@ include file="../includes/includes.jsp" %>
 
